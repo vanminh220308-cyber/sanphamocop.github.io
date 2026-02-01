@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sản Phẩm OCOP Quảng Bình</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="product.html" class="active">sản phẩm ocop</a>
+
+<nav>
+    <a href="index.html">Giới thiệu</a>
+    <a href="product.html">Sản Phẩm</a>
+    <a href="order.html">Đặt hàng</a>
+</nav>
+
+<div class="main-container">
+
+<!-- SIDEBAR PHẢI -->
+<div id="sidebar" style="
+position:fixed;
+top:90px;
+right:10px;
+width:200px;
+z-index:1000;
+">
+
+    <!-- GIỎ HÀNG -->
+
+    <div id="cart" style="
+    background:white;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 0 8px rgba(0,0,0,0.2);
+    font-size:14px;
+    margin-bottom:15px;
+    ">
+        <h3 style="font-size:16px; margin:5px 0;">🛒 Giỏ hàng</h3>
+        <ul id="cartItems" style="padding-left:18px; max-height:120px; overflow-y:auto;"></ul>
+        <p><b>Tổng: <span id="cartTotal">0</span> VNĐ</b></p>
+        <button onclick="checkout()" style="width:100%; padding:6px; font-size:14px;">
+            Thanh toán
+        </button>
+    </div>
+
+    <!-- LIÊN HỆ -->
+    <div id="contact-box" style="
+    background:#fff3e0;
+    padding:10px;
+    border-radius:8px;
+    font-size:13px;
+    box-shadow:0 0 6px rgba(0,0,0,0.15);
+    ">
+        <h4 style="margin:5px 0; color:#ff5722;">📞 Liên hệ</h4>
+        <p style="margin:4px 0;">📍 Quảng Bình</p>
+        <p style="margin:4px 0;">☎ 0123 456 789</p>
+    </div>
+
+</div>
+
+
+<section id="product">
+<h2>🌿 20 Sản phẩm OCOP tiêu biểu tỉnh Quảng Bình</h2>
+
+<div class="product-container">
+
+<!-- 1 -->
+<div class="card">
+<img src="https://tse3.mm.bing.net/th/id/OIP.dIn3ajYJR-HcTLhlYSHUFgHaE8?pid=Api&P=0&h=180">
+<h3>Tiêu hạt sấy lạnh Sen Thủy ⭐⭐⭐⭐ (OCOP 4 sao)</h3>
+<p>Giá: 120.000 VNĐ</p>
+<button onclick="addToCart('Tiêu hạt sấy lạnh Sen Thủy',120000)">Đặt hàng</button>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<img src="https://tse2.mm.bing.net/th/id/OIP.tj4bH6s3FtJ5P01-U_Uh4gHaEL?pid=Api&P=0&h=180">
+<h3>Tổ yến chưng đường phèn Sơn Hải ⭐⭐⭐⭐</h3>
+<p>Giá: 350.000 VNĐ</p>
+<button onclick="addToCart('Tổ yến chưng đường phèn Sơn Hải',350000)">Đặt hàng</button>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="https://tse2.mm.bing.net/th/id/OIP._u7bI-YhIfZyR5HUEELFWAHaFj?pid=Api&P=0&h=180">
+<h3>Tổ yến tinh chế Sơn Hải ⭐⭐⭐⭐</h3>
+<p>Giá: 520.000 VNĐ</p>
+<button onclick="addToCart('Tổ yến tinh chế Sơn Hải',520000)">Đặt hàng</button>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<img src="https://quangbinhtrade.vn/wp-content/uploads/2023/03/Linh-Hue.jpg">
+<h3>Khoai gieo Linh Huệ ⭐⭐⭐⭐</h3>
+<p>Giá: 65.000 VNĐ</p>
+<button onclick="addToCart('Khoai gieo Linh Huệ',65000)">Đặt hàng</button>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<img src="https://tse3.mm.bing.net/th/id/OIP.fiuVZvi_jdHT7UzMujXUpAHaHa?pid=Api&P=0&h=180">
+<h3>Trà cà gai leo Thanh Bình ⭐⭐⭐⭐</h3>
+<p>Giá: 90.000 VNĐ</p>
+<button onclick="addToCart('Trà cà gai leo Thanh Bình',90000)">Đặt hàng</button>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<img src="https://quangbinhtrade.vn/wp-content/uploads/2023/09/ngu-ngon-760x540.jpg">
+<h3>Trà ngủ ngon Thanh Bình ⭐⭐⭐⭐</h3>
+<p>Giá: 95.000 VNĐ</p>
+<button onclick="addToCart('Trà ngũ ngon Thanh Bình',95000)">Đặt hàng</button>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<img src="https://tse3.mm.bing.net/th/id/OIP.jOGwHkdcw2bmZOyYCUXFiQHaJ5?pid=Api&P=0&h=180">
+<h3>Nấm mộc nhĩ Tuấn Linh ⭐⭐⭐⭐</h3>
+<p>Giá: 70.000 VNĐ</p>
+<button onclick="addToCart('Nấm mộc nhĩ Tuấn Linh',70000)">Đặt hàng</button>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<img src="https://namtuanlinh.vn/uploads/news/2019_11/lc3s.jpg">
+<h3>Nấm linh chi Tuấn Linh ⭐⭐⭐⭐</h3>
+<p>Giá: 180.000 VNĐ</p>
+<button onclick="addToCart('Nấm linh chi Tuấn Linh',180000)">Đặt hàng</button>
+</div>
+
+<!-- 9 -->
+<div class="card">
+<img src="https://tse2.mm.bing.net/th/id/OIP.4ePtThnWsmkkqBzPPwotrQHaFj?pid=Api&P=0&h=180">
+<h3>Mực ống Thanh Quang ⭐⭐⭐⭐</h3>
+<p>Giá: 250.000 VNĐ</p>
+<button onclick="addToCart('Mực ống Thanh Quang',250000)">Đặt hàng</button>
+</div>
+
+<!-- 10 -->
+<div class="card">
+<img src="https://tse3.mm.bing.net/th/id/OIP.2xJ89l03NtEvFP_SQrFsHQHaHa?pid=Api&P=0&h=180">
+<h3>Ếch ăn liền Ngư Nam ⭐⭐⭐</h3>
+<p>Giá: 65.000 VNĐ</p>
+<button onclick="addToCart('Ếch ăn liền Ngư Nam',65000)">Đặt hàng</button>
+</div>
+
+<!-- 11 -->
+<div class="card">
+<img src="https://tse4.mm.bing.net/th/id/OIP.YZxnNPMamTNJogKl0RmRpwHaHa?pid=Api&P=0&h=180">
+<h3>Trà thìa canh Thanh Bình ⭐⭐⭐</h3>
+<p>Giá: 80.000 VNĐ</p>
+<button onclick="addToCart('Trà thìa canh Thanh Bình',80000)">Đặt hàng</button>
+</div>
+
+<!-- 12 -->
+<div class="card">
+<img src="https://tse3.mm.bing.net/th/id/OIP.iWBASC-XKkGrK-DIXg8-LgHaE3?pid=Api&P=0&h=180">
+<h3>Cao linh chi Tuấn Linh ⭐⭐⭐</h3>
+<p>Giá: 150.000 VNĐ</p>
+<button onclick="addToCart('Cao linh chi Tuấn Linh',150000)">Đặt hàng</button>
+</div>
+
+<!-- 13 -->
+<div class="card">
+<img src="https://tse1.mm.bing.net/th/id/OIP.zKhn_5XDqj3vHWuXQJPa9wHaFR?pid=Api&P=0&h=180">
+<h3>Trà cà gai leo Linh Chi Tuấn Linh ⭐⭐⭐</h3>
+<p>Giá: 85.000 VNĐ</p>
+<button onclick="addToCart('Trà cà gai leo Linh Chi Tuấn Linh',85000)">Đặt hàng</button>
+</div>
+
+<!-- 14 -->
+<div class="card">
+<img src="https://tse1.mm.bing.net/th/id/OIP.lmPCqCw3DVK_abRioD4iOgHaHa?pid=Api&P=0&h=180">
+<h3>Trà xạ đen Tuấn Linh ⭐⭐⭐</h3>
+<p>Giá: 75.000 VNĐ</p>
+<button onclick="addToCart('Trà xạ đen Tuấn Linh',75000)">Đặt hàng</button>
+</div>
+
+<!-- 15 -->
+<div class="card">
+<img src="https://tse1.mm.bing.net/th/id/OIP.PJZkbHo-VCHBuWF0MGEhmQHaEg?pid=Api&P=0&h=180">
+<h3>Trà xanh linh chi Tuấn Linh ⭐⭐⭐</h3>
+<p>Giá: 85.000 VNĐ</p>
+<button onclick="addToCart('Trà xanh linh chi Tuấn Linh',85000)">Đặt hàng</button>
+</div>
+
+<!-- 16 -->
+<div class="card">
+<img src="https://tse4.mm.bing.net/th/id/OIP.Qdr5LJSPv7WTqB3iTGcZAwHaD4?pid=Api&P=0&h=180">
+<h3>Bột nêm nấm Đông Cô Tuấn Linh ⭐⭐⭐</h3>
+<p>Giá: 55.000 VNĐ</p>
+<button onclick="addToCart('Bột nêm nấm Đông Cô Tuấn Linh',55000)">Đặt hàng</button>
+</div>
+
+<!-- 17 -->
+<div class="card">
+<img src="https://tse4.mm.bing.net/th/id/OIP.RVtFuyyAK6a50NvRh2TxCwAAAA?pid=Api&P=0&h=180">
+<h3>Nấm hương Tuấn Linh ⭐⭐⭐</h3>
+<p>Giá: 95.000 VNĐ</p>
+<button onclick="addToCart('Nấm hương Tuấn Linh',95000)">Đặt hàng</button>
+</div>
+
+<!-- 18 -->
+<div class="card">
+<img src="https://tse2.mm.bing.net/th/id/OIP.Rpl3BdkceRMMBFRTUeGaswHaFz?pid=Api&P=0&h=180">
+<h3>Nước mắm chay Tuấn Linh ⭐⭐⭐</h3>
+<p>Giá: 60.000 VNĐ</p>
+<button onclick="addToCart('Nước mắm chay Tuấn Linh',60000)">Đặt hàng</button>
+</div>
+
+<!-- 19 -->
+<div class="card">
+<img src="https://tse1.mm.bing.net/th/id/OIP.yChtgdfxizET9o-cIZvebQHaHa?pid=Api&P=0&h=180">
+<h3>Nước mắm mực Thanh Quang ⭐⭐⭐</h3>
+<p>Giá: 90.000 VNĐ</p>
+<button onclick="addToCart('Nước mắm mực Thanh Quang',90000)">Đặt hàng</button>
+</div>
+
+<!-- 20 -->
+<div class="card">
+<img src="https://tse2.mm.bing.net/th/id/OIP.U0UCA_RQwhfY2AveJusSMQHaFO?pid=Api&P=0&h=180">
+<h3>Gạo hữu cơ Sông Gianh ⭐⭐⭐</h3>
+<p>Giá: 140.000 VNĐ</p>
+<button onclick="addToCart('Gạo hữu cơ Sông Gianh',140000)">Đặt hàng</button>
+</div>
+
+</div>
+
+</section>
+
+<script>
+let cart = [];
+let total = 0;
+
+function addToCart(name, price){
+    cart.push({name, price});
+    total += price;
+    renderCart();
+}
+
+function renderCart(){
+    let list = document.getElementById("cartItems");
+    list.innerHTML = "";
+    cart.forEach(item =>{
+        let li = document.createElement("li");
+        li.innerText = item.name + " - " + item.price + "đ";
+        list.appendChild(li);
+    });
+    document.getElementById("cartTotal").innerText = total;
+}
+
+function checkout(){
+    if(cart.length === 0){
+        alert("Giỏ hàng đang trống!");
+        return;
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("total", total);
+    window.location.href = "order.html";
+}
+</script>
+
+</body>
+</html>

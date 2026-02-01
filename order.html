@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Đặt hàng</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+#order{
+    max-width:600px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select{
+    width:100%;
+    padding:8px;
+    margin:6px 0 12px 0;
+}
+
+button{
+    padding:8px 14px;
+    border:none;
+    background:orange;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff8800;
+}
+
+.qty-box{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.qty-box input{
+    width:60px;
+    text-align:center;
+}
+
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="order.html" class="active">Đặt hàng</a>
+
+<nav>
+    <a href="index.html">Giới thiệu</a>
+    <a href="product.html">Sản Phẩm</a>
+    <a href="order.html">Đặt hàng</a>
+</nav>
+
+
+<section id="order">
+<h2>🛒 Đặt hàng</h2>
+
+<h3>📦 Sản Phẩm bạn đã chọn:</h3>
+<ul id="cartList"></ul>
+
+<h3>💰 Tổng thanh toán: <span id="cartTotal">0</span> VNĐ</h3>
+
+
+<form onsubmit="return false;">
+
+<label>Họ và tên</label>
+<input type="text" placeholder="Nhập tên" required>
+
+<label>Số điện thoại</label>
+<input type="text" placeholder="Nhập SĐT" required>
+
+<button type="button" onclick="submitOrder()">Gửi đơn</button>
+
+
+</form>
+</section>
+
+
+<section id="contact">
+<h2>Liên hệ</h2>
+<p>📍 Địa chỉ: Quảng Bình, Việt Nam</p>
+<p>📞 SĐT: 0123 456 789</p>
+</section>
+
+<footer>
+© 2026 - Website giới thiệu sản phẩm ocop Quảng Bình
+</footer>
+
+
+<script>
+
+// LẤY GIỎ HÀNG TỪ food.html
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let totalMoney = localStorage.getItem("total") || 0;
+
+
+// HIỂN THỊ GIỎ
+let list = document.getElementById("cartList");
+
+cart.forEach(item=>{
+    let li = document.createElement("li");
+    li.innerText = item.name + " - " + item.price.toLocaleString("vi-VN") + "đ";
+    list.appendChild(li);
+});
+
+// HIỂN THỊ TỔNG
+document.getElementById("cartTotal").innerText =
+Number(totalMoney).toLocaleString("vi-VN");
+
+
+function submitOrder(){
+
+    let nameInput = document.querySelector("input[type='text']");
+    let phoneInput = document.querySelectorAll("input[type='text']")[1];
+
+    // kiểm tra giỏ hàng rỗng
+    if(cart.length === 0){
+        alert("Giỏ hàng đang trống!");
+        return;
+    }
+
+    if(nameInput.value === "" || phoneInput.value === ""){
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+    }
+
+    // hiện popup
+    document.getElementById("successPopup").style.display = "flex";
+
+    // xoá giỏ hàng
+    localStorage.removeItem("cart");
+    localStorage.removeItem("total");
+
+    // reset form
+    nameInput.value = "";
+    phoneInput.value = "";
+
+    // reset giao diện
+    document.getElementById("cartList").innerHTML = "";
+    document.getElementById("cartTotal").innerText = "0";
+}
+
+
+function closePopup(){
+    document.getElementById("successPopup").style.display = "none";
+}
+
+
+// chạy khi vừa mở trang
+
+</script>
+
+<!-- POPUP THÀNH CÔNG -->
+<div id="successPopup" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+width:300px;
+">
+
+<h2>🎉 Đặt đơn thành công!</h2>
+<p>Cảm ơn bạn đã mua sản phẩm  ❤️</p>
+
+<button onclick="closePopup()">OK</button>
+
+</div>
+</div>
+
+</body>
+</html>

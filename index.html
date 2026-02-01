@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Sản Phẩm OCOP Lệ Thủy</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+
+
+nav{
+    background:#ff5722;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:20px;
+    font-size:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
+}
+
+/* MENU */
+nav{
+background:#ff5722;
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* BANNER */
+header{
+height:800px;
+background:url("https://special.nhandan.vn/ocop-san-vat-mang-gia-tri-van-hoa/assets/QLRdOphZ2E/ocop-1-2560x1440.jpeg") center/cover;
+}
+
+/* SECTION */
+section{
+padding:60px;
+}
+
+.food-container{
+display:flex;
+flex-wrap:wrap; /* QUAN TRỌNG: tự xuống dòng */
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+width:30%;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+button{
+background:#ff5722;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FORM */
+form{
+background:white;
+padding:30px;
+border-radius:10px;
+width:400px;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+footer{
+background:#ff5722;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* POPUP */
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+border-radius:10px;
+width:400px;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="active">Giới thiệu</a>
+
+
+<nav>
+<a href="#introduce">Giới Thiệu</a>
+<a href="product.html">Sản Phẩm OCOP</a>
+<a href="order.html">Đặt hàng</a>
+</nav>
+
+
+<header id="home"></header>
+
+<!-- GIỚI THIỆU -->
+<section id="introduce">
+
+<h2>🌟 20 Sản phẩm OCOP tiêu biểu tỉnh Quảng Bình</h2>
+
+<p style="font-size:22px; line-height:1.8">
+
+Chương trình <strong>OCOP (Mỗi xã một sản phẩm)</strong> tại Quảng Bình đã góp phần 
+nâng tầm các sản phẩm đặc trưng địa phương, gắn sản xuất với tiêu chuẩn chất lượng, 
+an toàn và giá trị văn hóa bản địa. Dưới đây là 20 sản phẩm OCOP tiêu biểu đạt 
+<strong>3–4 sao</strong>, được người tiêu dùng tin tưởng và đánh giá cao.
+
+<br><br>
+
+<strong>1️⃣ Tiêu hạt sấy lạnh Quảng Bình (OCOP 4⭐)</strong><br>
+<img src="https://tse3.mm.bing.net/th/id/OIP.dIn3ajYJR-HcTLhlYSHUFgHaE8?pid=Api&P=0&h=180" width="500"><br>
+Được trồng tại vùng đất đỏ bazan Quảng Bình, tiêu được thu hoạch thủ công, 
+sấy lạnh để giữ hương thơm tự nhiên. Sản phẩm đạt chứng nhận OCOP 4 sao, 
+đảm bảo an toàn thực phẩm.
+
+<br><br>
+
+<strong>2️⃣ Tổ yến chưng đường phèn Sơn Hải (OCOP 4⭐)</strong><br>
+<img src="https://tse2.mm.bing.net/th/id/OIP.tj4bH6s3FtJ5P01-U_Uh4gHaEL?pid=Api&P=0&h=180" width="500"><br>
+Sản xuất từ tổ yến thiên nhiên, chưng cách thủy cùng đường phèn tinh khiết. 
+Quy trình khép kín, không chất bảo quản, đạt chuẩn OCOP 4 sao.
+
+<br><br>
+
+<strong>3️⃣ Tổ yến tinh chế Sơn Hải (OCOP 4⭐)</strong><br>
+<img src="https://tse2.mm.bing.net/th/id/OIP._u7bI-YhIfZyR5HUEELFWAHaFj?pid=Api&P=0&h=180" width="500"><br>
+Tổ yến được làm sạch thủ công, giữ nguyên giá trị dinh dưỡng, 
+đóng gói đạt tiêu chuẩn vệ sinh an toàn thực phẩm OCOP 4 sao.
+
+<br><br>
+
+<strong>4️⃣ Khoai gieo Linh Huệ (OCOP 4⭐)</strong><br>
+<img src="https://quangbinhtrade.vn/wp-content/uploads/2023/03/Linh-Hue.jpg" width="500"><br>
+Khoai lang địa phương phơi nắng tự nhiên nhiều ngày, không phụ gia, 
+giữ độ dẻo và vị ngọt đặc trưng. Sản phẩm OCOP 4 sao tiêu biểu.
+
+<br><br>
+
+<strong>5️⃣ Trà cà gai leo Thanh Bình (OCOP 4⭐)</strong><br>
+<img src="https://tse3.mm.bing.net/th/id/OIP.fiuVZvi_jdHT7UzMujXUpAHaHa?pid=Api&P=0&h=180" width="500"><br>
+Nguyên liệu trồng theo hướng hữu cơ, sấy khô bằng công nghệ hiện đại, 
+đóng gói đạt chuẩn OCOP 4 sao, tốt cho sức khỏe.
+
+<br><br>
+
+<strong>6️⃣ Trà ngủ ngon Thanh Bình (OCOP 4⭐)</strong><br>
+<img src="https://quangbinhtrade.vn/wp-content/uploads/2023/09/ngu-ngon-760x540.jpg" width="500"><br>
+Kết hợp 5 loại thảo dược bản địa, sản xuất theo quy trình kiểm soát chất lượng nghiêm ngặt.
+
+<br><br>
+
+<strong>7️⃣ Nấm mộc nhĩ Tuấn Linh (OCOP 4⭐)</strong><br>
+<img src="https://tse3.mm.bing.net/th/id/OIP.jOGwHkdcw2bmZOyYCUXFiQHaJ5?pid=Api&P=0&h=180" width="500"><br>
+Trồng trong môi trường sạch, không hóa chất, thu hái và sấy khô tự nhiên.
+
+<br><br>
+
+<strong>8️⃣ Nấm linh chi Tuấn Linh (OCOP 4⭐)</strong><br>
+<img src="https://namtuanlinh.vn/uploads/news/2019_11/lc3s.jpg" width="500"><br>
+Sản phẩm dược liệu quý, đạt tiêu chuẩn OCOP 4 sao.
+
+<br><br>
+
+<strong>9️⃣ Mực ống khô Thanh Quang (OCOP 4⭐)</strong><br>
+<img src="https://tse2.mm.bing.net/th/id/OIP.4ePtThnWsmkkqBzPPwotrQHaFj?pid=Api&P=0&h=180" width="500"><br>
+Mực tươi đánh bắt ven biển Quảng Bình, phơi nắng tự nhiên, 
+đảm bảo vị ngọt và độ dai truyền thống.
+
+<br><br>
+
+<strong>🔟 Ếch ăn liền Ngư Nam (OCOP 3⭐)</strong><br>
+<img src="https://tse3.mm.bing.net/th/id/OIP.2xJ89l03NtEvFP_SQrFsHQHaHa?pid=Api&P=0&h=180" width="500"><br>
+Chế biến sẵn, đóng gói tiện lợi, đạt chuẩn OCOP 3 sao.
+
+<br><br>
+
+<strong>11️. Trà thìa canh Thanh Bình (OCOP 3⭐)</strong><br>
+<img src="https://tse4.mm.bing.net/th/id/OIP.YZxnNPMamTNJogKl0RmRpwHaHa?pid=Api&P=0&h=180" width="500"><br>
+Sản phẩm thảo dược truyền thống, hỗ trợ sức khỏe.
+
+<br><br>
+
+<strong>12️. Cao linh chi Tuấn Linh (OCOP 3⭐)</strong><br>
+<img src="https://tse3.mm.bing.net/th/id/OIP.iWBASC-XKkGrK-DIXg8-LgHaE3?pid=Api&P=0&h=180" width="500"><br>
+Cô đặc từ nấm linh chi nguyên chất, đảm bảo an toàn.
+
+<br><br>
+
+<strong>13️. Trà cà gai leo linh chi (OCOP 3⭐)</strong><br>
+<img src="https://tse1.mm.bing.net/th/id/OIP.zKhn_5XDqj3vHWuXQJPa9wHaFR?pid=Api&P=0&h=180" width="500"><br>
+Kết hợp dược liệu, sản xuất theo tiêu chuẩn OCOP.
+
+<br><br>
+
+<strong>14️. Trà xạ đen Tuấn Linh (OCOP 3⭐)</strong><br>
+<img src="https://tse1.mm.bing.net/th/id/OIP.lmPCqCw3DVK_abRioD4iOgHaHa?pid=Api&P=0&h=180" width="500"><br>
+Thảo dược truyền thống, sấy khô và đóng gói đạt chuẩn.
+
+<br><br>
+
+<strong>15.Trà xanh linh chi (OCOP 3⭐)</strong><br>
+<img src="https://tse1.mm.bing.net/th/id/OIP.PJZkbHo-VCHBuWF0MGEhmQHaEg?pid=Api&P=0&h=180" width="500"><br>
+
+<br><br>
+
+<strong>16️.Bột nêm nấm Đông Cô Tuấn Linh (OCOP 3⭐)</strong><br>
+<img src="https://tse4.mm.bing.net/th/id/OIP.Qdr5LJSPv7WTqB3iTGcZAwHaD4?pid=Api&P=0&h=180" width="500"><br>
+
+<br><br>
+
+<strong>17️. Nấm hương Tuấn Linh (OCOP 3⭐)</strong><br>
+<img src="https://tse4.mm.bing.net/th/id/OIP.RVtFuyyAK6a50NvRh2TxCwAAAA?pid=Api&P=0&h=180" width="500"><br>
+
+<br><br>
+
+<strong>18️. Nước mắm chay Tuấn Linh (OCOP 3⭐)</strong><br>
+<img src="https://tse2.mm.bing.net/th/id/OIP.Rpl3BdkceRMMBFRTUeGaswHaFz?pid=Api&P=0&h=180" width="500"><br>
+
+<br><br>
+
+<strong>19️. Nước mắm mực Thanh Quang (OCOP 3⭐)</strong><br>
+<img src="https://tse1.mm.bing.net/th/id/OIP.yChtgdfxizET9o-cIZvebQHaHa?pid=Api&P=0&h=180" width="500"><br>
+
+<br><br>
+
+<strong>20️. Gạo hữu cơ Sông Gianh (OCOP 3⭐)</strong><br>
+<img src="https://tse2.mm.bing.net/th/id/OIP.U0UCA_RQwhfY2AveJusSMQHaFO?pid=Api&P=0&h=180" width="500"><br>
+Canh tác theo hướng hữu cơ, không thuốc hóa học, 
+đảm bảo an toàn cho người tiêu dùng.
+
+<br><br>
+
+✨ <em>Các sản phẩm OCOP Quảng Bình không chỉ mang giá trị kinh tế mà còn là 
+niềm tự hào văn hóa của người dân địa phương.</em>
+
+</p>
+
+</section>
+
+
+</p>
+
+<div style="
+background:#fff3e0;
+padding:25px;
+border-radius:12px;
+margin-top:40px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+">
+
+<h2 style="color:#ff5722;">🍴 Bạn đã thấy hấp dẫn chưa?</h2>
+
+<p style="font-size:20px;">
+Nếu những sản phẩm ocop Quảng Bình trên khiến bạn thích thú và muốn thưởng thức ngay,
+<b>đừng chần chừ!</b> Hãy ghé qua trang 
+<a href="product.html" style="color:#ff5722; font-weight:bold;">
+Sản Phẩm
+</a> 
+để lựa chọn sản phẩm ocop yêu thích và đặt hàng nhanh chóng nhé!
+</p>
+
+<a href="product.html">
+<button style="
+padding:14px 28px;
+font-size:18px;
+background:#ff5722;
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+">
+👉 Đặt sản phẩm ngay
+</button>
+</a>
+
+</div>
+
+
+</section>
+
+<section id="contact">
+<h2>Liên hệ</h2>
+<p>📍 Địa chỉ: Quảng Bình, Việt Nam</p>
+<p>📞 SĐT: 0123 456 789</p>
+</section>
+
+
+</body>
+</html>
