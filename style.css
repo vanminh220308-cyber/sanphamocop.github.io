@@ -373,4 +373,14 @@ margin:auto;
     flex:1;
 }
 
+section strong {
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff5722;
+    margin-top: 50px;
+}
+
+
+
 
