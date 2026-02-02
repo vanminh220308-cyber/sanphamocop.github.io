@@ -380,12 +380,84 @@ section strong {
     color: #ff5722;
     margin-top: 50px;
 }
-.container {
-    max-width: 1100px;
+.product-content {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.product-content p {
+    margin-bottom: 15px;
+}
+
+.product-content ul,
+.product-content ol {
+    margin-left: 25px;
+}
+
+.product-content li {
+    margin-bottom: 8px;
+}
+/* TIÊU ĐỀ SẢN PHẨM OCOP */
+#introduce strong {
+    display: block;
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #e64a19;
+}
+
+/* NỘI DUNG MÔ TẢ SẢN PHẨM */
+#introduce ul,
+#introduce p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* ẢNH SẢN PHẨM */
+#introduce img {
+    display: block;
+    margin: 15px 0 25px 0;
+    max-width: 100%;
+}
+
+/* GIỚI HẠN CHIỀU RỘNG PHẦN GIỚI THIỆU */
+#introduce {
+    max-width: 1000px;
     margin: auto;
 }
 
+/* MỖI SẢN PHẨM LÀ 1 KHỐI RIÊNG */
+#introduce strong {
+    display: block;
+    font-size: 26px;
+    color: #e64a19;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
 
+/* MÔ TẢ + DANH SÁCH */
+#introduce p,
+#introduce ul,
+#introduce ol {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ẢNH Ở GIỮA */
+#introduce img {
+    display: block;
+    margin: 15px auto 25px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* TÁCH KHỐI SẢN PHẨM RÕ RÀNG */
+#introduce ul {
+    margin-bottom: 30px;
+    padding-left: 25px;
+}
 
 
 
